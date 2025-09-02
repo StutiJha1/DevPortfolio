@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom colors and font */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Remove these global a rules
+a {
+  color: #646cff;
+}
+a:hover {
+  color: #535bf2;
+} */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  background-color: #2a2a2a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
