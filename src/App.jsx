@@ -1,4 +1,6 @@
+// src/App.jsx
 import { useRef } from "react";
+import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
@@ -11,39 +13,33 @@ function App() {
   const contactRef = useRef(null);
 
   return (
-    <div className="relative">
+    <div className="relative bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 right-0 w-full bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-10 py-4 flex justify-end">
-          <ul className="flex gap-[7rem] font-semibold text-maroon">
+          <ul className="flex gap-16 font-semibold text-maroon text-xl">
             <li>
-              <a
-                href="#about"
-                className="px-4 hover:text-red-700 transition-colors"
-              >
+              <a href="#about" className="hover:text-red-700 transition-colors">
                 About
               </a>
             </li>
             <li>
               <a
                 href="#projects"
-                className="px-4 hover:text-red-700 transition-colors"
+                className="hover:text-red-700 transition-colors"
               >
                 Projects
               </a>
             </li>
             <li>
-              <a
-                href="#skills"
-                className="px-4 hover:text-red-700 transition-colors"
-              >
+              <a href="#skills" className="hover:text-red-700 transition-colors">
                 Skills
               </a>
             </li>
             <li>
               <a
                 href="#contact"
-                className="px-4 hover:text-red-700 transition-colors"
+                className="hover:text-red-700 transition-colors"
               >
                 Contact
               </a>
@@ -52,16 +48,10 @@ function App() {
         </div>
       </nav>
 
-      {/* Portfolio sections */}
-      <section
-        id="about"
-        ref={aboutRef}
-        className="min-h-screen flex flex-col justify-center items-center bg-white text-maroon"
-      >
-        <h1 className="text-5xl font-bold mb-4">Hi, I'm Stuti Jha</h1>
-        <p className="text-2xl">A Computer Science Student & Developer</p>
-      </section>
+      {/* Hero / About Section */}
+      <Hero ref={aboutRef} />
 
+      {/* Portfolio Sections */}
       <Projects ref={projectsRef} />
       <Skills ref={skillsRef} />
       <Contact ref={contactRef} />
